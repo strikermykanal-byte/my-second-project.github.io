@@ -1,0 +1,128 @@
+*{box-sizing: border-box;}
+.container{
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+    padding: 15px;
+font-size: 20px;
+animation: fadeIn 1.2s ease-in;
+width: 100%;
+width: 400px;
+background-color: var(--card-bg);
+box-shadow:0 0 15px rgba(63, 0, 134, 0.637);
+border-radius: 15px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+input[type=text], input[type=password]{
+    width: 100%;
+    display: inline-block;
+    margin: 5px 0 22px 0;
+    border:none;
+    border-radius: 15px;
+    padding: 15px;
+    background:#f1f1f1;
+    font-size: 20px;
+    box-shadow: 0 0 15px rgba(63, 0, 134, 0.637);
+    transition:background-color 0.3s ease , color 0.3s ease; ;
+}
+input[type=text]:focus, input[type=password]:focus{
+    background: #ddd;
+    outline: none;
+}
+
+hr{
+    margin-bottom: 22px;
+    border:  solid 1px #f1f1f1;
+}
+.registerBtn{
+    background-color:#30007cb9 ;
+    color: white;
+    padding: 15px 18px;
+    margin: 10 0px ;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.8;
+}
+.registerBtn:hover{
+    opacity: 1;
+}
+
+a{
+    color: rgba(45, 46, 48, 0.808);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #f1f1f1;
+}
+
+.signin{
+background-color: #f1f1f1;
+text-align: center;
+}
+p{
+justify-self: center;
+align-items: center;
+font-size: 25px;
+}
+h1{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+:root{
+color-scheme:light dark;
+    --card-bg: #f7f7f7;
+    --bg-color: #ffffff;
+    --text-color: #213547;
+    --accent-color: #0066cc;
+}
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --accent-color: #66b3ff;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+      transition: background-color 0.3s ease , color 0.3s ease;
+}
+.icon-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 6px; /* отступ между иконкой и текстом .toggle-text, если он у вас видимый */
+}
+.icon-toggle:hover{
+    color: var(--accent-color);
+}
